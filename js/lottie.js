@@ -1,9 +1,9 @@
 var nova = {
-		wrapper: document.getElementsByClassName('github_icon'),
+		wrapper: document.getElementById('github_icon_id'),
 		animType: 'svg',
-		loop: 2,
+		loop: true,
 		prerender: true,
 		autoplay: true,
-		path: './img/github_icon.json'
+		path: 'https://assets9.lottiefiles.com/packages/lf20_SiFYir.json'
 	}
 lottie.loadAnimation(nova)

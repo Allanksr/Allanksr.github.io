@@ -11,13 +11,23 @@
 </head>
 <body>
 <div id="navbar">
-  <div class='github_icon'></div>
+  <div id="github_icon_id" class='github_icon'></div>
   <img class='profile_img' src="img/allanksr.png">
   <a href="#home">Home</a>
   <a href="#news">News</a>
   <a href="#contact">Contact</a>
 </div>
-
+<script>
+var nova = {
+		wrapper: document.getElementById('github_icon_id'),
+		animType: 'svg',
+		loop: true,
+		prerender: true,
+		autoplay: true,
+		path: 'https://assets9.lottiefiles.com/packages/lf20_SiFYir.json'
+	}
+lottie.loadAnimation(nova)
+</script>
 
 </body>
 </html>
