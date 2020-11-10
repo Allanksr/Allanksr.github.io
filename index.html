@@ -10,27 +10,96 @@
 
 </head>
 <body>
-<div id="navbar">
-  <a href="https://github.com/Allanksr" target="_blank"><div alt="github icon" id="github_icon_id" class="github_icon"></div></a>
-  <a href="https://www.allanksr.com/" target="_blank"><img alt="developer image" class="profile_img" src="img/allanksr.png"></a>
-    <p class="dev_android">Desenvolvedor Fullstack</p>
+<div id='navbar'>
+  <a href='https://github.com/Allanksr' target='_blank'><div alt='github icon' class='github_icon' id='github_icon_id'/></a>
+  <a href='https://www.allanksr.com/' target='_blank'><img alt='developer image' class='profile_img' src='https://lh3.googleusercontent.com/-_VkeoY72B4g/X6nG0Y2khPI/AAAAAAAAOXU/MrZnVRUlqTYqXP12IE4qM4491HB3SGdmwCLcBGAsYHQ/allanksr.png'/></a>
+  <p class='dev_android'>Desenvolvedor Fullstack</p> 
+	  <div align='center'>
+             <div class='container' onclick='showHideHamburguer(this)'>
+                 <div class='bar1'/>
+                 <div class='bar2'/>
+                 <div class='bar3'/>
+             </div>
+                <div class='menu_container' id='menu_container_action'>
+              <button type="button" class="btn btn-outline-secondary menu_links"><a href="https://play.google.com/store/apps/dev?id=6061636122303064973" target="_blank">Aplicativos</a></button>
+			  <button type="button" class="btn btn-outline-secondary menu_links"><a href="https://stackoverflow.com/users/6800637/allanribas" target="_blank">Stackoverflow</a></button>
+			  <button type="button" class="btn btn-outline-secondary menu_links"><a href="https://github.com/Allanksr" target="_blank">Github</a></button>
+			  <button type="button" class="btn btn-outline-secondary menu_links"><a href="https://www.npmjs.com/~allanksr" target="_blank">Npm</a></button>
+			  <button type="button" class="btn btn-outline-secondary menu_links"><a href="https://lottiefiles.com/allanksr" target="_blank">LottieFiles</a></button>
+			  <button type="button" class="btn btn-outline-secondary menu_links"><a href="https://twitter.com/Allanksr" target="_blank">Twitter</a></button>
+			  <button type="button" class="btn btn-outline-secondary menu_links"><a href="https://www.linkedin.com/in/allanksr/" target="_blank">Linkedin</a></button>
+			  <button type="button" class="btn btn-outline-secondary menu_links"><a href="https://www.youtube.com/allanksr" target="_blank">Youtube</a></button>
+			  <button type="button" class="btn btn-outline-secondary menu_links"><a href="https://www.instagram.com/desenvolvedorbr/" target="_blank">Instagram</a></button>
+                </div>
+		</div>
+  
 </div>
 
-<span>Teste</span><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-<span>Teste</span><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-<span>Teste</span><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 
 <script>
+var menu_container_action = document.getElementById(&quot;menu_container_action&quot;)
+var container = document.getElementsByClassName(&quot;container&quot;)[0]
+var x = window.matchMedia(&quot;(min-device-width : 640px)&quot;)
+queryElemets(x) 
+x.addListener(queryElemets)
+
 var nova = {
-		wrapper: document.getElementById('github_icon_id'),
-		animType: 'svg',
+		wrapper: document.getElementById(&quot;github_icon_id&quot;),
+		animType: &quot;svg&quot;,
 		loop: true,
 		prerender: true,
 		autoplay: true,
-		path: 'https://assets9.lottiefiles.com/packages/lf20_SiFYir.json'
+		path: &quot;https://assets9.lottiefiles.com/packages/lf20_SiFYir.json&quot;
 	}
 lottie.loadAnimation(nova)
+
+var showItems = false
+function showHideHamburguer(x) {
+	if(!showItems){
+	  showItems = true
+	  menu_container_action.setAttribute(&quot;class&quot;, &quot;menu_container_show&quot;)
+	}else{
+	  showItems = false
+	  menu_container_action.setAttribute(&quot;class&quot;, &quot;menu_container&quot;)
+	}
+
+  x.classList.toggle(&quot;change&quot;)
+}
+
+function queryElemets(x) {
+  if(x.matches){
+	  if(showItems){
+	    showItems = false
+	    menu_container_action.setAttribute(&quot;class&quot;, &quot;menu_container&quot;)
+	    container.classList.toggle(&quot;change&quot;)
+	  }
+	
+ }
+}
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos &gt; currentScrollPos) {
+    document.getElementById(&quot;navbar&quot;).style.top = &quot;0&quot;;
+  } else {
+    document.getElementById(&quot;navbar&quot;).style.top = &quot;-200px&quot;;
+	if(showItems){
+	    showItems = false
+	    menu_container_action.setAttribute(&quot;class&quot;, &quot;menu_container&quot;)
+	    container.classList.toggle(&quot;change&quot;)
+	  }
+  }
+  prevScrollpos = currentScrollPos;
+}
+
 </script>
+
+<span>Teste</span><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<span>Teste</span><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+<span>Teste</span><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+
 
 
 
